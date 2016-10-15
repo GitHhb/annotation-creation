@@ -13,10 +13,10 @@ public class Controller {
 		Method[] methods = obj.getDeclaredMethods();
 		Arrays.sort(methods, new Comparator<Method>(){
 			public int compare (Method x, Method y){
-				return x.getAnnotation(Order.class).orderNr() - y.getAnnotation(Order.class).orderNr();
+				return x.getAnnotation(Order.class).value() - y.getAnnotation(Order.class).value();
 			}
 		});
-		// Process methods in order of annotation orderNr
+		// Process methods in order of annotation value
 		for (Method m: methods ) {
 			/*
 			// print method name

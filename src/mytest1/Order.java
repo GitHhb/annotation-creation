@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 @Retention(RUNTIME)
 @Target(METHOD)
 public @interface Order {
-	int orderNr() default 999;
+	int value()		default 999;
+	String name()	default "me";
 
 }
